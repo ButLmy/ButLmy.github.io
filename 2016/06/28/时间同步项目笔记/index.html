@@ -108,7 +108,7 @@
 二、提高精度的方案
 时间戳标记位置介质无关层（MII）标记时间戳
 为报文设置优先级">
-<meta property="og:updated_time" content="2016-07-12T06:29:13.563Z">
+<meta property="og:updated_time" content="2016-07-12T06:34:01.176Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="时间同步项目笔记">
 <meta name="twitter:description" content="一、影响PTP时钟同步的因素网络中影响同步精度的因素有很多，软件实现相对硬件支持来说受误差影响更明显，主要包括：主从时钟频率的不一致、时间戳的精度、操作系统的延时、网络链路的不对称性、网络设备转发的延时（如路由器和交换机）、网络流量和负载的影响等。
@@ -368,11 +368,10 @@
 <li>对clock drift的测量，认为短时间内是不变的，或者是根据时间稳定变化的p=p0+d*t，d是drift的变化率</li>
 </ol>
 <hr>
-<h1 id="三、数据分析"><a href="#三、数据分析" class="headerlink" title="三、数据分析"></a>三、数据分析</h1><h2 id="移动平均滤波"><a href="#移动平均滤波" class="headerlink" title="移动平均滤波"></a>移动平均滤波</h2><pre><code>对于一组采样点，用一个Ｎ 个点大小的条形窗口对其采样点进行平均值的计算，计算得到的值作为当前采样点的值，然后将窗口向下一个采样点移动一格，进行同样的计算。
-</code></pre><h2 id="线性拟合"><a href="#线性拟合" class="headerlink" title="线性拟合"></a>线性拟合</h2><p>用线性拟合方法建立时钟漂移率数学模型，计算clock drift rate，用它来调整本地时间，当通信出现故障，也可以根基计算出来的offset来调整本地时钟，不对同步造成影响，并克服网络延迟和抖动对同步造成的影响（基于NTP 的时钟调整策略分析）</p>
+<h1 id="三、数据分析"><a href="#三、数据分析" class="headerlink" title="三、数据分析"></a>三、数据分析</h1><h2 id="移动平均滤波"><a href="#移动平均滤波" class="headerlink" title="移动平均滤波"></a>移动平均滤波</h2><p>对于一组采样点，用一个Ｎ 个点大小的条形窗口对其采样点进行平均值的计算，计算得到的值作为当前采样点的值，然后将窗口向下一个采样点移动一格，进行同样的计算。</p>
+<h2 id="线性拟合"><a href="#线性拟合" class="headerlink" title="线性拟合"></a>线性拟合</h2><p>用线性拟合方法建立时钟漂移率数学模型，计算clock drift rate，用它来调整本地时间，当通信出现故障，也可以根基计算出来的offset来调整本地时钟，不对同步造成影响，并克服网络延迟和抖动对同步造成的影响（基于NTP 的时钟调整策略分析）</p>
 <ol>
-<li>最小平方法（A Stable Clock Synchronization Based on Clock Drift Rate）<br>输入数据：数组（localtime，offset）   输出：y=b0+b1*x，经过计算得到b0和b1，b1就是clock drift rate</li>
-<li><h2 id="时钟偏差的补偿和时钟频率偏差的补偿"><a href="#时钟偏差的补偿和时钟频率偏差的补偿" class="headerlink" title="时钟偏差的补偿和时钟频率偏差的补偿"></a>时钟偏差的补偿和时钟频率偏差的补偿</h2><h3 id="凸包法"><a href="#凸包法" class="headerlink" title="凸包法"></a>凸包法</h3><h3 id="二阶卡尔曼滤波"><a href="#二阶卡尔曼滤波" class="headerlink" title="二阶卡尔曼滤波"></a>二阶卡尔曼滤波</h3><h3 id="单神经元自适应PID控制器对本地时钟频率进行控制"><a href="#单神经元自适应PID控制器对本地时钟频率进行控制" class="headerlink" title="单神经元自适应PID控制器对本地时钟频率进行控制"></a>单神经元自适应PID控制器对本地时钟频率进行控制</h3><h1 id="五、其他方法"><a href="#五、其他方法" class="headerlink" title="五、其他方法"></a>五、其他方法</h1></li>
+<li>最小平方法（A Stable Clock Synchronization Based on Clock Drift Rate）<br>输入数据：数组（localtime，offset）   输出：y=b0+b1*x，经过计算得到b0和b1，b1就是clock drift rate<h2 id="时钟偏差的补偿和时钟频率偏差的补偿"><a href="#时钟偏差的补偿和时钟频率偏差的补偿" class="headerlink" title="时钟偏差的补偿和时钟频率偏差的补偿"></a>时钟偏差的补偿和时钟频率偏差的补偿</h2><h3 id="凸包法"><a href="#凸包法" class="headerlink" title="凸包法"></a>凸包法</h3><h3 id="二阶卡尔曼滤波"><a href="#二阶卡尔曼滤波" class="headerlink" title="二阶卡尔曼滤波"></a>二阶卡尔曼滤波</h3><h3 id="单神经元自适应PID控制器对本地时钟频率进行控制"><a href="#单神经元自适应PID控制器对本地时钟频率进行控制" class="headerlink" title="单神经元自适应PID控制器对本地时钟频率进行控制"></a>单神经元自适应PID控制器对本地时钟频率进行控制</h3><h1 id="五、其他方法"><a href="#五、其他方法" class="headerlink" title="五、其他方法"></a>五、其他方法</h1></li>
 <li>纯软件实现的ptp<br>（1）前面的offset和delay的获取采用ptpd的方法，但是后面收发数据时的时间戳采用硬件方法实现，需要硬件支持。<br>（2）只有两端网络节点有硬件支持，中间网络设备是通用设备。<br>（3）时间戳处理：linux内核让内核协议栈在接受到一个网络贞时，打上时间戳，将此时间戳与网络贞一起送到用户空间，在收到的报文中取出SCM_TIMESTAMP类型数据。<br>（4）PTPD和NTP的区别：PTP协议有follow_up报文，能准确的将sync报文发送时间发送给slave；ptp协议采用bmc算法，选取最佳主时钟，时钟 的质量、稳定性最佳<br>（5）影响软件实现ptp精度的因素：OS调度；内存管理；UDP、IP等协议的封装和解封；网卡控制器里的FIFO；总线仲裁</li>
 <li>纯硬件实现的ptp<br>（1）FPGA实现（2）集成有PTP协议的网络收发硬件<h1 id="四、性能测试"><a href="#四、性能测试" class="headerlink" title="四、性能测试"></a>四、性能测试</h1>通过改变网络流量、主机负载、拓扑结构等条件来观察实验结果的变化。</li>
 <li>局域网测量<br>因为局域网未与外网相连，主机之间仅靠路由器通信，可以较好的排除网络链路不对称和网络流量、拓扑、突发随机事件等因素对实验结果的影响。实验方法是：两台主机上电启动后，指定一台作为主时钟，另一台为从时钟。直接修改本地时钟的时间，可能造成系统错误，所以一般采用锁相环的方法对频率进行修改，使偏移逐渐收敛。实验结果展示：绘制横坐标表示时间，纵坐标表示时间差offset的图像。</li>
