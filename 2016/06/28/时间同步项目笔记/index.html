@@ -92,8 +92,9 @@
 网络拓扑结构
 
 二、提高精度的方案
-时间戳标记位置介质无关层（MII）标记时间戳
-为报文设置优先级">
+时间戳标记位置
+为报文设置优先级
+主从时钟频率调节个系统时钟周">
 <meta property="og:type" content="article">
 <meta property="og:title" content="时间同步项目笔记">
 <meta property="og:url" content="https://butlmy.github.io/2016/06/28/时间同步项目笔记/index.html">
@@ -106,9 +107,10 @@
 网络拓扑结构
 
 二、提高精度的方案
-时间戳标记位置介质无关层（MII）标记时间戳
-为报文设置优先级">
-<meta property="og:updated_time" content="2016-07-12T06:37:58.651Z">
+时间戳标记位置
+为报文设置优先级
+主从时钟频率调节个系统时钟周">
+<meta property="og:updated_time" content="2016-07-12T06:40:24.832Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="时间同步项目笔记">
 <meta name="twitter:description" content="一、影响PTP时钟同步的因素网络中影响同步精度的因素有很多，软件实现相对硬件支持来说受误差影响更明显，主要包括：主从时钟频率的不一致、时间戳的精度、操作系统的延时、网络链路的不对称性、网络设备转发的延时（如路由器和交换机）、网络流量和负载的影响等。
@@ -119,8 +121,9 @@
 网络拓扑结构
 
 二、提高精度的方案
-时间戳标记位置介质无关层（MII）标记时间戳
-为报文设置优先级">
+时间戳标记位置
+为报文设置优先级
+主从时钟频率调节个系统时钟周">
 
 
 
@@ -361,7 +364,7 @@
 <li>网络拓扑结构</li>
 </ol>
 <h1 id="二、提高精度的方案"><a href="#二、提高精度的方案" class="headerlink" title="二、提高精度的方案"></a>二、提高精度的方案</h1><ol>
-<li>时间戳标记位置<h3 id="介质无关层（MII）标记时间戳"><a href="#介质无关层（MII）标记时间戳" class="headerlink" title="介质无关层（MII）标记时间戳"></a>介质无关层（MII）标记时间戳</h3></li>
+<li>时间戳标记位置</li>
 <li>为报文设置优先级</li>
 <li>主从时钟频率调节<br>个系统时钟周期，加数寄存器的值就会累加到累加计数器当中，当32位累加计数器溢出时，纳秒累加寄存器的值就会累加到纳秒寄存器中，纳秒寄存器中的时间值大于1000000000时，秒寄存器的值加1，纳秒寄存器的值减1000000000，</li>
 <li>基于划分时隙的的<br>在以太网驱动接口部分 开辟了时间戳记录通道，实时记录网络数据发送和接 收的时间</li>
@@ -613,7 +616,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、影响PTP时钟同步的因素"><span class="nav-number">1.</span> <span class="nav-text">一、影响PTP时钟同步的因素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、提高精度的方案"><span class="nav-number">2.</span> <span class="nav-text">二、提高精度的方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介质无关层（MII）标记时间戳"><span class="nav-number">2.0.1.</span> <span class="nav-text">介质无关层（MII）标记时间戳</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、数据分析"><span class="nav-number">3.</span> <span class="nav-text">三、数据分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#移动平均滤波"><span class="nav-number">3.1.</span> <span class="nav-text">移动平均滤波</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性拟合"><span class="nav-number">3.2.</span> <span class="nav-text">线性拟合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时钟偏差的补偿和时钟频率偏差的补偿"><span class="nav-number">3.3.</span> <span class="nav-text">时钟偏差的补偿和时钟频率偏差的补偿</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#凸包法"><span class="nav-number">3.3.1.</span> <span class="nav-text">凸包法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二阶卡尔曼滤波"><span class="nav-number">3.3.2.</span> <span class="nav-text">二阶卡尔曼滤波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单神经元自适应PID控制器对本地时钟频率进行控制"><span class="nav-number">3.3.3.</span> <span class="nav-text">单神经元自适应PID控制器对本地时钟频率进行控制</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、其他方法"><span class="nav-number">4.</span> <span class="nav-text">四、其他方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、性能测试"><span class="nav-number">5.</span> <span class="nav-text">五、性能测试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、影响PTP时钟同步的因素"><span class="nav-number">1.</span> <span class="nav-text">一、影响PTP时钟同步的因素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、提高精度的方案"><span class="nav-number">2.</span> <span class="nav-text">二、提高精度的方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、数据分析"><span class="nav-number">3.</span> <span class="nav-text">三、数据分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#移动平均滤波"><span class="nav-number">3.1.</span> <span class="nav-text">移动平均滤波</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性拟合"><span class="nav-number">3.2.</span> <span class="nav-text">线性拟合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时钟偏差的补偿和时钟频率偏差的补偿"><span class="nav-number">3.3.</span> <span class="nav-text">时钟偏差的补偿和时钟频率偏差的补偿</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#凸包法"><span class="nav-number">3.3.1.</span> <span class="nav-text">凸包法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二阶卡尔曼滤波"><span class="nav-number">3.3.2.</span> <span class="nav-text">二阶卡尔曼滤波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单神经元自适应PID控制器对本地时钟频率进行控制"><span class="nav-number">3.3.3.</span> <span class="nav-text">单神经元自适应PID控制器对本地时钟频率进行控制</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、其他方法"><span class="nav-number">4.</span> <span class="nav-text">四、其他方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、性能测试"><span class="nav-number">5.</span> <span class="nav-text">五、性能测试</span></a></li></ol></div>
             
           </div>
         </section>
